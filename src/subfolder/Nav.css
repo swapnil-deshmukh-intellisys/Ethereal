@@ -1,0 +1,248 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 80px;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+#logout{
+  height: 50px;
+  /* width: 50px; */
+  cursor: pointer;
+}
+
+.main-nav{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Desktop Menu Styles */
+.desktopmenu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.desktopmenuListitem {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.desktopmenuListitem:hover {
+  color: #ffeb3b;
+}
+
+.desktopmenu .book-now-btn {
+  /* background-color: #99775C; */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  background: linear-gradient(to right, #6b5441 50%, #99775C 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+
+.desktopmenu .book-now-btn:hover {
+  background-color: #ae7b51;
+  background-position: left bottom;
+}
+
+.book-now-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Active Tab Styles */
+.active {
+  font-weight: bold;
+  /* border-bottom: 2px solid white; Underline for active tabs */
+  color: #D9D418;
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styles */
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.mobilemenuListitem {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.mobilemenuListitem:hover {
+  background-color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .desktopmenu {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+
+/* Dropdown Menu for Desktop */
+.gallery-dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  z-index: 100;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: white;
+  /* Make sure it doesn't overflow to the right */
+}
+
+.dropdown-item {
+  /* padding: 10px 20px; */
+  text-decoration: none;
+  color: white;
+  background-color: #000000;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: #000000;
+}
+
+/* Adjust dropdown menu position if it goes out of viewport */
+.gallery-dropdown:hover .dropdown-menu {
+  right: 0; /* Align the dropdown to the right edge */
+}
+
+.gallery-dropdown:hover .dropdown-menu {
+  transform: translateX(-45%);
+  /* This will shift the menu to the left to ensure it stays within the viewport */
+}
+
+/* Optional: If the menu is too large, you can limit its size */
+.dropdown-menu {
+  max-width: 300px;  /* Limit maximum width to avoid too large dropdown */
+}
+
+/* Style for the down arrow */
+.down-arrow {
+  margin-left: 5px;
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.gallery-dropdown:hover .down-arrow {
+  transform: rotate(180deg); /* Rotate the arrow when the dropdown is active */
+}
+
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown-menu {
+  display: none;
+  flex-direction: column;
+}
+
+.mobile-dropdown-item {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-dropdown-item.active {
+  background-color: #555;
+}
+
+/* Mobile Menu Styles */
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  padding: 1rem 0;
+  justify-content: center; /* Centers the menu items */
+  align-items: center; /* Ensure the gallery link is centered */
+}
+
+/* Mobile Menu Item Styling */
+.mobilemenuListitem {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.mobilemenuListitem:hover {
+  background-color: black;
+}
+
+/* Gallery Dropdown in Mobile */
+.gallery-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the dropdown */
+}
+
+
+@media (max-width: 768px) {
+  .mobile-dropdown-menu {
+    display: flex; /* Show the dropdown in mobile */
+  }
+}
+
+
